@@ -1,0 +1,108 @@
+
+
+.register_notice{
+    min-height: calc(100vh - 120px);
+    /* background-color: aqua; */
+}
+
+.register_notice .register_notice_header{
+    padding-top: 20px;
+}
+
+.register_notice .title_notice{
+    font-size: 22px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.register_notice .content_register_notice{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register_notice .content_register_notice .left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register_notice .content_register_notice .left img{
+    width: 400px;
+    height: 400px;
+}
+
+.register_notice .content_register_notice .right{
+    direction: rtl;
+    padding: 40px;
+    width: 50%;
+}
+
+.register_notice .content_register_notice .right .rols_notice{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.register_notice .content_register_notice .right .rols_notice span{
+    font-size: 24px;
+    color: red;
+    font-weight:bold;
+}
+
+.register_notice .steper_form{
+    padding: 50px;
+}
+
+
+/* media query */
+@media (max-width:850px){
+    .register_notice .content_register_notice .left{
+        width: 40%;
+    }
+    .register_notice .content_register_notice .left img{
+        width: 300px;
+        height: 300px;
+     }
+     .register_notice .content_register_notice .right{
+        width: 60%;
+        padding: 15px;
+    }
+    .register_notice .content_register_notice .right .rols_notice{
+        margin-top: 10px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+@media (max-width:450px){
+    .register_notice .title_notice{
+        font-size: 18px;
+        padding-top: 35px;
+        line-height: 25px;
+    }
+    .register_notice .content_register_notice{
+        width: 100%;
+        margin-top: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .register_notice .content_register_notice .left{
+        width: 100%;
+    }
+    .register_notice .content_register_notice .left img{
+       width: 250px;
+       height: 250px;
+    }
+    .register_notice .content_register_notice .right{
+        padding: 20px;
+        width: 100%;
+    }
+    .register_notice .content_register_notice .right .rols_notice{
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+}

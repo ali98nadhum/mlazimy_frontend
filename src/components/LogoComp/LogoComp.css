@@ -1,0 +1,34 @@
+
+
+.logo_loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: logoAnim 2s ease 0s 1 normal forwards;
+}
+
+.logo_loading img{
+    width: 250px;
+    height: 250px;
+}
+
+@keyframes logoAnim {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+@media (max-width: 450px){
+    .logo_loading img{
+        width: 200px;
+        height: 200px;
+    }
+}

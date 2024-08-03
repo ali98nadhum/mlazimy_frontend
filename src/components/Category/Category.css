@@ -1,0 +1,206 @@
+
+/* ===== Start category banner ===== */
+.category_section{
+    min-height: calc(100vh - 120px);
+}
+
+
+.category_section .category_banner{
+    width: 100%;
+    height: 750px;
+    background-image: linear-gradient(90deg, rgb(62, 25, 113),rgb(53,21,94));
+}
+
+.category_section .category_banner .category_header{
+    padding-top: 20px;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+.category_section .category_banner .content_banner{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.category_section .category_banner .content_banner .left{
+    width: 50%;
+}
+
+.category_section .category_banner .content_banner .left img{
+    width: 500px;
+    height: 500px;
+}
+
+.category_section .category_banner .content_banner .right{
+    width: 50%;
+    direction: rtl;
+    padding: 60px;
+}
+
+.category_section .category_banner .content_banner .right h1{
+    margin-top: 20px;
+    font-size: 36px;
+    color: white;
+}
+
+.category_section .category_banner .content_banner .right hr{
+    width: 160px;
+    margin-top: 10px;
+    height: 3px;
+    background-color: orange;
+    border: none;
+    border-radius: 15px;
+}
+
+.category_section .category_banner .content_banner .right p{
+    margin-top: 20px;
+    line-height: 35px;
+    font-size: 22px;
+    color: white;
+}
+
+/* Media query */
+@media (max-width:850px){
+    .category_section .category_banner .content_banner{
+        display: block;
+        margin-top: 20px;
+    }
+    .category_section .category_banner .content_banner .left{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .category_section .category_banner .content_banner .left img{
+        width: 350px;
+        height: 350px;
+    }
+    .category_section .category_banner .content_banner .right{
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+    .category_section .category_banner .content_banner .right hr{
+        width: 160px;
+        margin: auto;
+        margin-top: 10px;
+        height: 3px;
+        background-color: orange;
+        border: none;
+        border-radius: 15px;
+    }
+}
+@media (max-width:450px){
+    .category_section .category_banner .content_banner{
+        display: block;
+        margin-top: 30px;
+    }
+    .category_section .category_banner .content_banner .left{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .category_section .category_banner .content_banner .left img{
+        width: 250px;
+        height: 250px;
+    }
+    .category_section .category_banner .content_banner .right{
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+    .category_section .category_banner .content_banner .right hr{
+        width: 160px;
+        margin: auto;
+        margin-top: 10px;
+        height: 3px;
+        background-color: orange;
+        border: none;
+        border-radius: 15px;
+    }
+}
+/* ===== End category banner ===== */
+
+
+/* ===== Start grid card ===== */
+.category_section .grid_card{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 40px 30px;
+    padding-bottom: 80px;
+}
+
+.category_section .grid_card a{
+    text-decoration: none;
+}
+
+.center_loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+
+.category_section .no_category_found{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    grid-column: 1 / -1;
+}
+
+.category_section .no_category_found .detils{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.category_section .no_category_found .detils img{
+    width: 450px;
+    height: 450px;
+}
+
+.category_section .no_category_found .detils p{
+    text-align: center;
+    font-size: 22px;
+}
+
+
+
+/* Media query */
+@media (max-width:850px){
+    .category_section .grid_card{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+    .category_section .no_category_found .detils img{
+        width: 350px;
+        height: 350px;
+        margin: auto;
+    }
+}
+
+@media (max-width:450px){
+    .category_section .grid_card{
+        grid-template-columns: repeat(1 , 1fr);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .category_section .no_category_found .detils img{
+        width: 250px;
+        height: 250px;
+        margin: auto;
+    }
+    
+    .category_section .no_category_found .detils p{
+        font-size: 18px;
+    }
+    
+}
+/* ===== End grid card ===== */

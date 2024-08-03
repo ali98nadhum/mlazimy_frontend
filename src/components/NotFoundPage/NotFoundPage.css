@@ -1,0 +1,37 @@
+
+
+.not_found_page .not_found_page_header{
+    padding-top: 30px;
+}
+
+.not_found_page .not_found_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.not_found_page .not_found_image img{
+    width: 500px;
+    height: 500px;
+}
+
+.not_found_page .not_found_des{
+    padding: 10px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.not_found_page .not_found_des a{
+    text-decoration: none;
+    color: red;
+}
+
+@media (max-width:450px){
+    .not_found_page .not_found_image img{
+        width: 300px;
+        height: 300px;
+    }
+    .not_found_page .not_found_des{
+        font-size: 18px;
+    }
+}

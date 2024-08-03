@@ -1,0 +1,24 @@
+
+.title_category_card{
+    text-align: center;
+}
+
+
+[data-theme="dark"] .title_category_card{
+    color: white;
+    transition: 1000ms;
+}
+
+[data-theme="dark"] .category_card{
+    background-color: rgb(30,30,30) !important;
+    transition: 1000ms;
+}
+
+
+[data-theme="light"] .title_category_card{
+    transition: 1000ms;
+}
+
+[data-theme="light"] .category_card{
+    transition: 1000ms;
+}

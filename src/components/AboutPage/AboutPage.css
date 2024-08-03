@@ -1,0 +1,111 @@
+.about_section {
+    min-height: calc(100vh - 120px);
+}
+
+.about_section .about_section_header {
+    padding-top: 20px;
+}
+
+.about_section .title_about_page {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 34px;
+}
+
+.about_section .line_about_page {
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgb(99, 210, 218);
+    height: 3px;
+    border: none;
+    border-radius: 30px;
+}
+
+.about_section .card_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 50px 0;
+}
+
+.about_section .card_container .card_about_page {
+    width: 600px;
+    height: 400px;
+    background-color: #eee;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.about_section .card_container .card_about_page .name_card {
+    text-align: center;
+    font-size: 22px;
+}
+
+.about_section .card_container .card_about_page .des_card {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.about_section .card_container .card_about_page .icon_card {
+    padding: 15px;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.about_section .card_container .card_about_page .icon_card .icon {
+    font-size: 28px;
+    color: black;
+}
+
+.about_section .card_container .card_about_page .icon_card .icon:hover {
+    color: orange;
+    transition: 250ms;
+}
+
+
+@media (max-width:450px) {
+    .about_section .card_container .card_about_page {
+        height: initial;
+    }
+}
+
+
+/* ===== Dark Mode Style ===== */
+[data-theme="dark"] .about_section .title_about_page{
+    color: white;
+    transition: 1000ms;
+}
+
+[data-theme="dark"] .about_section .card_container .card_about_page{
+    background-color: rgb(30,30,30);
+    transition: 1000ms;
+}
+
+[data-theme="dark"] .about_section .card_container .card_about_page .name_card{
+    color: white;
+    transition: 1000ms;
+}
+
+[data-theme="dark"] .about_section .card_container .card_about_page .des_card{
+    color: #6B7280;
+    transition: 1000ms;
+}
+
+[data-theme="dark"] .about_section .card_container .card_about_page .icon_card .icon
+{
+    color: rgb(99, 210, 218);
+    transition: 1000ms;
+}
+
+[data-theme="dark"] .about_section .card_container .card_about_page .icon_card .icon:hover{
+    color: white;
+    transition: 250ms;
+}

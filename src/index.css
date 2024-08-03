@@ -1,0 +1,25 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Almarai', sans-serif;
+}
+
+
+
+/* Globl var */
+:root{
+  --primary:rgb(6, 179, 188);
+}
+
+
+
+[data-theme="dark"]{
+  background-color: rgb(20,24,27);
+  transition: 1000ms;
+}
+
+[data-theme="light"]{
+  transition: 1000ms;
+}

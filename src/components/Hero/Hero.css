@@ -1,0 +1,423 @@
+
+
+.hero_section {
+    min-height: calc(100vh - 120px);
+}
+
+
+/* ===== Start Hero banner ===== */
+
+.hero_section .hero_banner {
+    width: 100%;
+    height: 750px;
+    background-image: radial-gradient(circle at 29% 55%, hsla(329, 0%, 99%, 0.05) 0%, hsla(329, 0%, 99%, 0.05) 4%, transparent 4%, transparent 44%, transparent 44%, transparent 100%), radial-gradient(circle at 85% 89%, hsla(329, 0%, 99%, 0.05) 0%, hsla(329, 0%, 99%, 0.05) 51%, transparent 51%, transparent 52%, transparent 52%, transparent 100%), radial-gradient(circle at 6% 90%, hsla(329, 0%, 99%, 0.05) 0%, hsla(329, 0%, 99%, 0.05) 53%, transparent 53%, transparent 64%, transparent 64%, transparent 100%), radial-gradient(circle at 35% 75%, hsla(329, 0%, 99%, 0.05) 0%, hsla(329, 0%, 99%, 0.05) 6%, transparent 6%, transparent 98%, transparent 98%, transparent 100%), radial-gradient(circle at 56% 75%, hsla(329, 0%, 99%, 0.05) 0%, hsla(329, 0%, 99%, 0.05) 16%, transparent 16%, transparent 23%, transparent 23%, transparent 100%), radial-gradient(circle at 42% 0%, hsla(329, 0%, 99%, 0.05) 0%, hsla(329, 0%, 99%, 0.05) 3%, transparent 3%, transparent 26%, transparent 26%, transparent 100%), radial-gradient(circle at 29% 28%, hsla(329, 0%, 99%, 0.05) 0%, hsla(329, 0%, 99%, 0.05) 51%, transparent 51%, transparent 75%, transparent 75%, transparent 100%), radial-gradient(circle at 77% 21%, hsla(329, 0%, 99%, 0.05) 0%, hsla(329, 0%, 99%, 0.05) 35%, transparent 35%, transparent 55%, transparent 55%, transparent 100%), radial-gradient(circle at 65% 91%, hsla(329, 0%, 99%, 0.05) 0%, hsla(329, 0%, 99%, 0.05) 46%, transparent 46%, transparent 76%, transparent 76%, transparent 100%), linear-gradient(45deg, rgb(12, 100, 91), rgb(76, 11, 174));
+}
+
+.hero_section .hero_banner .hero_header {
+    padding-top: 20px;
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+}
+
+.hero_section .hero_banner .content_banner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.hero_section .hero_banner .content_banner .left {
+    width: 50%;
+}
+
+.hero_section .hero_banner .content_banner .left img {
+    width: 500px;
+    height: 500px;
+}
+
+.hero_section .hero_banner .content_banner .right {
+    width: 50%;
+    direction: rtl;
+    padding: 60px;
+}
+
+.hero_section .hero_banner .content_banner .right h2 {
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.hero_section .hero_banner .content_banner .right hr {
+    margin-top: 15px;
+    height: 2px;
+    background-color: orange;
+    border-radius: 15px;
+    border: none;
+    width: 150px;
+}
+
+.hero_section .hero_banner .content_banner .right .hero_Typewriter {
+    margin-top: 20px;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+}
+
+.hero_section .hero_banner .content_banner .right .hero_Typewriter span {
+    color: #FFA500;
+}
+
+.hero_section .hero_banner .content_banner .right .hero_des {
+    margin-top: 15px;
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.hero_section .hero_banner .content_banner .right .notice_des {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: orange;
+}
+
+.hero_section .hero_banner .content_banner .right .notice_btn {
+    margin-top: 15px;
+    background-color: #e67e22;
+    color: white;
+    font-family: 'Almarai', sans-serif;
+    font-weight: 600;
+}
+
+.hero_section .hero_banner .content_banner .right .notice_btn:hover {
+    background-color: #ffab62;
+}
+
+
+/*  media query */
+@media (max-width:850px) {
+    .hero_section .hero_banner .content_banner {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .hero_section .hero_banner .content_banner .left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero_section .hero_banner .content_banner .left img {
+        width: 300px;
+        height: 300px
+    }
+
+    .hero_section .hero_banner .content_banner .right {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero_section .hero_banner .content_banner .right hr {
+        width: 160px;
+        margin: auto;
+        margin-top: 20px;
+        height: 3px;
+    }
+}
+
+@media (max-width:450px) {
+    .hero_section .hero_banner .content_banner {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .hero_section .hero_banner .content_banner .left {
+        display: none;
+    }
+
+    .hero_section .hero_banner .content_banner .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero_section .hero_banner .content_banner .right hr {
+        width: 150px;
+        margin: auto;
+        margin-top: 20px;
+        height: 3px;
+    }
+
+    .hero_section .hero_banner .content_banner .right .hero_des {
+        margin-top: 25px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .hero_section .hero_banner .content_banner .right .notice_des {
+        margin-top: 30px;
+        color: white;
+        line-height: 30px;
+    }
+
+    @media (max-width:390px) {
+        .hero_section .hero_banner .content_banner .right .hero_Typewriter {
+            margin-top: 20px;
+            font-size: 30px;
+            color: white;
+            font-weight: 600;
+        }
+
+    }
+
+}
+
+/* ===== End Hero bnnar ===== */
+
+
+
+
+
+/* ===== Hero Down sec ===== */
+.hero_section .hero_dwon {
+    width: 100%;
+    margin-top: 90px;
+}
+
+.hero_section .hero_dwon .title_hero_dwon {
+    font-size: 36px;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 500;
+}
+
+.hero_section .hero_dwon hr {
+    height: 4px;
+    background-color: orange;
+    border-radius: 15px;
+    border: none;
+    width: 300px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.hero_section .hero_dwon .content_hero_dwon {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.hero_section .hero_dwon .content_hero_dwon .left_hero_dwon {
+    width: 40%;
+}
+
+.hero_section .hero_dwon .content_hero_dwon .left_hero_dwon img {
+    width: 450px;
+    height: 350px;
+    margin-top: 80px;
+}
+
+.hero_section .hero_dwon .content_hero_dwon .right_hero_dwon {
+    width: 60%;
+    padding: 20px 20px 0 0;
+}
+
+.hero_section .hero_dwon .content_hero_dwon .right_hero_dwon .item {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+}
+
+.hero_section .hero_dwon .content_hero_dwon .right_hero_dwon .item .line {
+    height: 100px;
+    background-color: orange;
+    border-radius: 8px;
+    margin-left: 10px;
+    padding: 3px;
+}
+
+.hero_section .hero_dwon .content_hero_dwon .right_hero_dwon .item p {
+    font-size: 20px;
+    direction: rtl;
+    line-height: 30px;
+}
+
+.hero_section .hero_dwon .content_hero_dwon .right_hero_dwon .item p a {
+    font-size: 18px;
+    color: blue;
+    text-decoration: none;
+}
+
+/* media query */
+@media (max-width:850px) {
+    .hero_section .hero_dwon .content_hero_dwon {
+        flex-direction: column;
+    }
+
+    .hero_section .hero_dwon .title_hero_dwon {
+        padding-top: initial;
+    }
+
+    .hero_section .hero_dwon .content_hero_dwon .left_hero_dwon {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero_section .hero_dwon .content_hero_dwon .left_hero_dwon img {
+        width: 350px;
+        height: 350px;
+        margin-top: 30px;
+    }
+
+    .hero_section .hero_dwon .content_hero_dwon .right_hero_dwon {
+        width: 100%;
+    }
+}
+
+@media (max-width:450px) {
+    .hero_section .hero_dwon .content_hero_dwon {
+        flex-direction: column;
+    }
+
+    .hero_section .hero_dwon .title_hero_dwon {
+        padding-top: initial;
+    }
+
+    .hero_section .hero_dwon hr {
+        width: 200px;
+    }
+
+    .hero_section .hero_dwon .content_hero_dwon .left_hero_dwon {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero_section .hero_dwon .content_hero_dwon .left_hero_dwon img {
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    .hero_section .hero_dwon .content_hero_dwon .right_hero_dwon {
+        width: 100%;
+    }
+
+}
+
+/* ===== End Down sec ===== */
+
+
+
+
+/* ===== Start Content Us ===== */
+
+.hero_section .contact_us {
+    background-color: #eeeeeeab;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.hero_section .contact_us .contact_us_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_section .contact_us .contact_us_image img {
+    width: 400px;
+    height: 400px;
+}
+
+.hero_section .contact_us .contact_us_link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero_section .contact_us .contact_us_link .btn_telegram {
+    direction: rtl;
+}
+
+.hero_section .contact_us .contact_us_link .btn_telegram:hover {
+    background-color: #5ca0e4;
+    transition: 250ms;
+}
+
+.hero_section .contact_us .contact_us_link .btn_telegram a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Almarai', sans-serif;
+}
+
+.hero_section .contact_us .contact_us_link .btn_telegram .telegram_icon {
+    margin-right: 10px;
+}
+
+/* media query */
+@media (max-width:850px) {
+    .hero_section .contact_us {
+        width: 90%;
+        margin-top: 100px;
+        border-radius: 20px;
+        padding: 30px;
+    }
+
+    .hero_section .contact_us .contact_us_image img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width:450px) {
+    .hero_section .contact_us {
+        width: 90%;
+        margin-top: 100px;
+        border-radius: 20px;
+        padding: 30px;
+    }
+
+    .hero_section .contact_us .contact_us_image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero_section .contact_us .contact_us_link {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero_section .contact_us .contact_us_link .btn_telegram {
+        margin-top: 10px;
+    }
+}
+
+/* ===== End Content Us ===== */
+
+
+
+
+/* ===== Dark Mode Style */
+
+[data-theme="dark"] .hero_section .hero_dwon .title_hero_dwon,
+.hero_section .hero_dwon .content_hero_dwon .right_hero_dwon .item p {
+    color: white;
+    transition: 1500ms;
+}
+
+[data-theme="dark"] .hero_section .contact_us {
+    background-color: rgb(24, 38, 52);
+}
+
+[data-theme="light"] .hero_section .hero_dwon .content_hero_dwon .right_hero_dwon .item p {
+    color: black;
+}
