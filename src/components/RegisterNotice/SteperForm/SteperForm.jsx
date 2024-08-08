@@ -5,6 +5,8 @@ import {
   Stepper, Step, StepLabel, Button, TextField, Box, Typography, Select, MenuItem, CircularProgress, Snackbar, Alert,
 } from '@mui/material';
 import axios from 'axios';
+import Lottie from "lottie-react";
+import doneAnimation from "../../../animation/done.json";
 
 const steps = ['المعلومات الأساسية', 'تأكيد البريد الإلكتروني', 'إدخال كود التفعيل'];
 
@@ -124,6 +126,11 @@ const RegistrationStepper = () => {
         {activeStep === steps.length ? (
           <Typography variant="h5" align="center">
             تمت عمليه التسجيل بنجاح 
+            <Lottie
+              style={{ height: "100px" }}
+              loop={false}
+              animationData={doneAnimation}
+            />
           </Typography>
         ) : (
           <Formik
