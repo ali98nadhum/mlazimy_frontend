@@ -208,3 +208,9 @@
 
 
 
+
+
+
+[data-theme="dark"] .training_section .no_category_found .detils p{
+    color: wheat;
+}

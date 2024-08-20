@@ -77,6 +77,14 @@
 }
 
 
+.subcategory_card .content .favorite_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
 [data-theme="dark"] .subcategory_card{
     background-color: rgb(30,30,30);
     transition: 1000ms;
@@ -105,3 +113,26 @@
 [data-theme="light"] .subcategory_card .content .date_subcategory{
     transition: 1000ms;
 }
+
+
+/* CardSubCategory.css */
+.favorite-icon {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .favorite-icon.favorite {
+    color: red; /* Red color when added to favorites */
+    animation: shake 0.5s;
+  }
+  
+
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }

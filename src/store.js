@@ -5,19 +5,19 @@ export const useStore = create((set) => ({
   // Dark mode state
   isDark: false,
   setIsDark: (isDark) => set({ isDark }),
-  
 
   // Loading state
   isLoading: false,
   setIsLoading: (isLoading) => set({ isLoading }),
-
 
   // fetch category data state
   categoryData: [],
   fetchData: async () => {
     try {
       set({ isLoading: true });
-      const response = await axios.get('https://mlazimy-api.vercel.app/category');
+      const response = await axios.get(
+        "https://mlazimy-api.vercel.app/category"
+      );
       set({ categoryData: response.data.data, isLoading: false });
     } catch (error) {
       console.error("Error fetching data", error);
@@ -30,47 +30,98 @@ export const useStore = create((set) => ({
   totalSubcategories: 0,
   currentPage: 1,
   itemsPerPage: 6,
-  fetchSubcategories: async (id, page, limit) => {
+  fetchSubcategories: async (id, page, limit, searchQuery = "") => {
     try {
-      set({ isLoading: true });
-      const response = await axios.get(`https://mlazimy-api.vercel.app/category/${id}`, {
-        params: {
-          page: page,
-          limit: limit,
-        },
-      });
-      set({
-        subcategories: response.data.subcategories,
-        totalSubcategories: response.data.total,
-        currentPage: page,
-        isLoading: false,
-      });
+      set({ isLoading: true, error: null }); // Reset error state
+
+      const response = await axios.get(
+        `https://mlazimy-api.vercel.app/category/${id}`,
+        {
+          params: {
+            page: page,
+            limit: limit,
+            search: searchQuery,
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        set({
+          subcategories: response.data.subcategories, 
+          totalSubcategories: response.data.total,
+          currentPage: page,
+          isLoading: false,
+          error: false,
+        });
+      }
     } catch (error) {
       console.error("Error fetching subcategories", error);
-      set({ isLoading: false });
+      set({ isLoading: false, error: true });
     }
   },
 
+  // Get All Subcategory
+  subcategoryData: [],
+  fetchSubcategory: async () => {
+    try {
+      const response = await axios.get(
+        "https://mlazimy-api.vercel.app/subcategory"
+      );
+      set({ subcategoryData: response.data.data });
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  },
 
-   // fetch work data state
-   workData: [],
-   totalCount: 0,
-   currentPage: 1,
-   itemsPerPage: 6,
-   fetchWorkData: async (page) => {
-     try {
-       set({ isLoading: true });
-       const response = await axios.get(`https://mlazimy-api.vercel.app/work?page=${page}`);
-       set({
-         workData: response.data.data,
-         totalCount: response.data.totalResults,
-         currentPage: page,
-         isLoading: false,
-       });
-     } catch (error) {
-       console.error("Error fetching work data", error);
-       set({ isLoading: false });
-     }
-   },
+  // Get All Notice
+  notUserData: [],
+  fetchUsersNotice: async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const response = await axios.get(
+        "https://mlazimy-api.vercel.app/notice",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      set({ notUserData: response.data.data, isLoading: false });
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  },
 
+  // favoriteLectures
+  favoriteLectures: JSON.parse(localStorage.getItem("favorites")) || [],
+  toggleFavorite: (lecture) => {
+    set((state) => {
+      const isFavorited = state.favoriteLectures.some(
+        (item) => item._id === lecture._id
+      );
+      let updatedFavorites;
+
+      if (isFavorited) {
+        // Remove from favorites
+        updatedFavorites = state.favoriteLectures.filter(
+          (item) => item._id !== lecture._id
+        );
+      } else {
+        // Add to favorites
+        updatedFavorites = [...state.favoriteLectures, lecture];
+      }
+
+      // Update localStorage
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+
+      return { favoriteLectures: updatedFavorites };
+    });
+  },
+
+  setFavoriteLectures: (updatedFavorites) => {
+    set(() => {
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      return { favoriteLectures: updatedFavorites };
+    });
+  },
 }));

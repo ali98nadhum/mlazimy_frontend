@@ -5,7 +5,8 @@ import SubCategoryPage from "./components/SubCategory/SubCategory";
 import RegisterNotice from "./components/RegisterNotice/RegisterNotice";
 import AboutPage from "./components/AboutPage/AboutPage";
 import TrainingPage from "./components/TrainingPage/TrainingPage";
-import LoadingPage from "./components/LoadingPage/LoadingPage";
+import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
+import Favorites from "./components/Favorites/Favorites";
 import {useStore} from "./store"
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
           <Route path="/register_notice" element={<RegisterNotice />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/training" element={<TrainingPage />} />
-          <Route path="*" element={<LoadingPage />} />
+          <Route path="/favorites_lec" element={<Favorites />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </div>

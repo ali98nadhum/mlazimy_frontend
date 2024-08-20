@@ -20,6 +20,9 @@ const Header = () => {
                 <Link to={"/about"}> حول المنصه </Link>
               </li>
               <li>
+                <Link to={"/favorites_lec"}> مكتبتي</Link>
+              </li>
+              <li>
                 <Link to={"/training"}> فرص التدريب </Link>
               </li>
               <li>
@@ -62,6 +65,9 @@ const Header = () => {
               </li>
               <li>
                 <Link to={"/training"}> فرص التدريب </Link>
+              </li>
+              <li>
+                <Link to={"/favorites_lec"}> مكتبتي</Link>
               </li>
               <li>
                 <Link to={"/about"}> حول المنصه </Link>

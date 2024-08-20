@@ -11,18 +11,36 @@ import Button from "@mui/material/Button";
 import contactImage from "../../assets/mention-77.svg";
 import { FaTelegram } from "react-icons/fa";
 import Footer from "../Footer/Footer";
+import { GiSpellBook , GiBookshelf } from "react-icons/gi";
+import { FaPerson } from "react-icons/fa6";
+import { useStore } from "../../store";
+
+
+
 
 const Hero = () => {
   const [showLogoComp, setShowLogoComp] = useState(true);
+  const { categoryData ,fetchData , subcategoryData , fetchSubcategory , notUserData , fetchUsersNotice} = useStore((state) => ({
+    categoryData: state.categoryData,
+    fetchData: state.fetchData,
+    fetchSubcategory: state.fetchSubcategory,
+    subcategoryData: state.subcategoryData,
+    fetchUsersNotice: state.fetchUsersNotice,
+    notUserData: state.notUserData
+  }));
  
 
   useEffect(() => {
+    fetchData()
+    fetchSubcategory()
+    fetchUsersNotice()
     const timer = setTimeout(() => {
       setShowLogoComp(false);
     }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
+  
 
   return (
     <>
@@ -77,6 +95,23 @@ const Hero = () => {
           {/* Content Hero Dwon sec */}
           <div className="hero_dwon">
             <Container>
+              <div className="statistics-sec">
+                <div className="statistics-box">
+                <FaPerson  className="statistics-icon" />
+                  <p className="statistics-t">الطلاب المسجلين</p>
+                  <p className="statistics-n"> {notUserData.length} </p>
+                </div>
+                <div className="statistics-box">
+                <GiBookshelf className="statistics-icon" />
+                  <p className="statistics-t">عدد المحاضرات</p>
+                  <p className="statistics-n"> {subcategoryData.length} </p>
+                </div>
+                <div className="statistics-box">
+                <GiSpellBook className="statistics-icon" />
+                  <p className="statistics-t">عدد المواد</p>
+                  <p className="statistics-n"> {categoryData.length} </p>
+                </div>
+              </div>
               <h6 className="title_hero_dwon">خدمات المنصه</h6>
               <hr />
               <div className="content_hero_dwon">

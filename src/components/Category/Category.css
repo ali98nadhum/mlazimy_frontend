@@ -204,3 +204,7 @@
     
 }
 /* ===== End grid card ===== */
+
+[data-theme="dark"] .category_section .no_category_found .detils p{
+    color: wheat;
+}
