@@ -6,7 +6,7 @@ const TrainingCard = ({workData}) => {
     <>
       <div className="training_card">
         <div className="image">
-            <img src={workData.image.url} alt="image" />
+            <img src={workData.image.url} alt="image"/>
         </div>
         <div className="content">
           <a href="#">

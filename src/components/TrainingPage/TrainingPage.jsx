@@ -25,6 +25,9 @@ const TrainingPage = () => {
     fetchWorkData(currentPage);
   }, [fetchWorkData, currentPage]);
 
+  console.log(workData);
+  
+
   const handlePageChange = (event, value) => {
     fetchWorkData(value);
   };

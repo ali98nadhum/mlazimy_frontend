@@ -4,7 +4,7 @@
     border: 1px solid transparent;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     direction: rtl;
-    /* max-width: 400px; */
+    width:300px;
   }
   
   .training_card a {
@@ -41,6 +41,7 @@
     color: #6B7280;
     font-size: 1rem;
     line-height: 1.25rem;
+    word-wrap: break-word;
   }
   
   .action {

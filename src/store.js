@@ -25,6 +25,21 @@ export const useStore = create((set) => ({
     }
   },
 
+  // fetch training data
+  workData:[],
+  currentPage: 1,
+  totalCount: 0,
+  fetchWorkData: async (page) => {
+    try {
+      set({isLoading:true , currentPage:page});
+      const response = await axios.get(`https://mlazimy-api.vercel.app/work/?page=${page}`);
+      set({ workData: response.data.data,totalCount:response.data.totalResults, isLoading: false });
+    } catch (error) {
+      console.error("Error fetching data", error);
+      set({ isLoading: false });
+    }
+  },
+
   // fetch subcategory data state
   subcategories: [],
   totalSubcategories: 0,
