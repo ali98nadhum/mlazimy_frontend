@@ -7,6 +7,7 @@ import Lottie from "lottie-react";
 import favoriteAnimation from "../../animation/favorites.json";
 import { useStore } from "../../store";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const Favorites = () => {
@@ -37,6 +38,11 @@ const Favorites = () => {
 
   return (
     <div className="favorites">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>المحاضرات المفضله - منصه ملازمي</title>
+                <link rel="canonical" href="https://mlazimy.netlify.app/favorites_lec" />
+            </Helmet>
       <div className="header-favorites">
         <Header />
       </div>

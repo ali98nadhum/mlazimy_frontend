@@ -10,6 +10,7 @@ import AnimatedBox from "../AnimatedBox/AnimatedBox";
 import Pagination from "@mui/material/Pagination";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import { useStore } from "../../store";
+import { Helmet } from "react-helmet";
 
 const TrainingPage = () => {
   const { workData, fetchWorkData, currentPage, totalCount, isLoading } =
@@ -35,6 +36,11 @@ const TrainingPage = () => {
   return (
     <>
       <section className="training_section">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>فرص التدريب - منصه ملازمي</title>
+                <link rel="canonical" href="https://mlazimy.netlify.app/training" />
+            </Helmet>
         {/* start training banner */}
         <div className="training_banner">
           <div className="training_header">

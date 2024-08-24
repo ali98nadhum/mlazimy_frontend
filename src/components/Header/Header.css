@@ -151,15 +151,13 @@ header .nav ul li a:hover{
 /* ===== Start Model Style */
 
 .model{
-    width: 100%;
-    height: 600px;
+    width: 60%;
+    height: 700px;
     background-color: white;
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 2px;
-    animation: modelAnim 0.7s 1;
+    animation: modelAnim 0.7s 1 ease-out;
     z-index: 999;
     position: absolute;
+    right: 0;
 }
 
 .model .btn_dark{
@@ -187,11 +185,19 @@ header .nav ul li a:hover{
     color: black;
 }
 
-@keyframes modelAnim{
-    0% {scale: 0;}
-    60% {scale: 1.2;}
-    100% {scale: 1;}
+
+
+@keyframes modelAnim {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
+
 
 /* ===== End Model Style */
 

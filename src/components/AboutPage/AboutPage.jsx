@@ -9,6 +9,7 @@ import Footer from "../Footer/Footer";
 import Container from "../Container/Container";
 import { FaTelegram, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import AnimatedBox from "../AnimatedBox/AnimatedBox";
+import { Helmet } from "react-helmet";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -48,6 +49,11 @@ const AboutPage = () => {
   return (
     <>
       <section className="about_section">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>حول المنصه - منصه ملازمي</title>
+                <link rel="canonical" href="https://mlazimy.netlify.app/about" />
+            </Helmet>
         <div className="about_section_header">
           <Header />
         </div>

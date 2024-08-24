@@ -14,6 +14,7 @@ import Footer from "../Footer/Footer";
 import { GiSpellBook , GiBookshelf } from "react-icons/gi";
 import { FaPerson } from "react-icons/fa6";
 import { useStore } from "../../store";
+import { Helmet } from "react-helmet";
 
 
 
@@ -47,6 +48,11 @@ const Hero = () => {
       {showLogoComp && <LogoComp />}
       {!showLogoComp && (
         <section className="hero_section">
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>الصفحه الرئيسيه - منصه ملازمي</title>
+                <link rel="canonical" href="https://mlazimy.netlify.app/" />
+            </Helmet>
           {/* start herobanner banner */}
           <div className="hero_banner">
             <div className="hero_header">

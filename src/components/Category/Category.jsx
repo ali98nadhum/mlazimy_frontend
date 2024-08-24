@@ -10,6 +10,7 @@ import LoadingPage from "../LoadingPage/LoadingPage";
 import image from "../../assets/no data.png";
 import { useStore } from "../../store";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Category = () => {
   const { categoryData, isLoading, fetchData } = useStore((state) => ({
@@ -24,6 +25,11 @@ const Category = () => {
   return (
     <>
       <section className="category_section">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>المواد الدراسيه - منصه ملازمي</title>
+                <link rel="canonical" href="https://mlazimy.netlify.app/category" />
+            </Helmet>
         {/* start category banner */}
         <div className="category_banner">
           <div className="category_header">

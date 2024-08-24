@@ -6,11 +6,17 @@ import Container from "../Container/Container";
 import img from "../../assets/register_notice.svg";
 import SteperForm from "./SteperForm/SteperForm";
 import AnimatedBox from "../AnimatedBox/AnimatedBox";
+import { Helmet } from "react-helmet";
 
 const RegisterNotice = () => {
   return (
     <>
       <div className="register_notice">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>الاشتراك في خدمه الاشعارات - منصه ملازمي</title>
+                <link rel="canonical" href="https://mlazimy.netlify.app/register_notice" />
+            </Helmet>
         <Container>
           <div className="register_notice_header">
             <Header />
