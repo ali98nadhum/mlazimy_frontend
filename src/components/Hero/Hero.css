@@ -191,6 +191,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 60px;
 }
 
 .hero_section .hero_dwon .statistics-sec .statistics-box{
@@ -463,3 +464,4 @@
 [data-theme="dark"] .hero_section .hero_dwon .statistics-sec .statistics-box .statistics-n{
     color: white;
 }
+

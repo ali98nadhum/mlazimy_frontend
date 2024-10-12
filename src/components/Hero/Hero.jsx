@@ -15,6 +15,10 @@ import { GiSpellBook , GiBookshelf } from "react-icons/gi";
 import { FaPerson } from "react-icons/fa6";
 import { useStore } from "../../store";
 import { Helmet } from "react-helmet";
+import Calendar from "../Calendar/Calendar";
+
+
+
 
 
 
@@ -29,6 +33,10 @@ const Hero = () => {
     fetchUsersNotice: state.fetchUsersNotice,
     notUserData: state.notUserData
   }));
+
+
+
+ 
  
 
   useEffect(() => {
@@ -118,6 +126,9 @@ const Hero = () => {
                   <p className="statistics-n"> {categoryData.length} </p>
                 </div>
               </div>
+             {/* Calendar */}
+             <Calendar/>
+
               <h6 className="title_hero_dwon">خدمات المنصه</h6>
               <hr />
               <div className="content_hero_dwon">
