@@ -1,44 +1,81 @@
-.calendar_section {
-    text-align: center;
+/* MyCalendar.css */
+
+/* نمط الحاوية */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%; /* جعل الحاوية متجاوبة */
   }
   
+  /* نمط التقويم */
   .rbc-calendar {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    width: 100%; /* عرض كامل */
+    max-width: 800px; /* حد أقصى للعرض */
+    margin: 50px auto; /* محاذاة وسط الشاشة */
+    border-radius: 10px; /* زوايا دائرية */
+    overflow: hidden; /* إخفاء أي جزء زائد */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* تأثير الظل */
   }
   
-  .rbc-header {
-    background-color: #f5f5f5;
-    color: #333;
-    font-weight: bold;
+  /* نمط شريط العنوان */
+  .rbc-toolbar {
+    background: #f5f5f5; /* لون الخلفية */
+    border-bottom: 1px solid #e0e0e0; /* حد أسفل */
+    padding: 10px;
   }
   
+  /* نمط الأحداث */
   .rbc-event {
-    color: white;
-    font-size: 14px;
-    padding: 5px;
-    border-radius: 4px;
-  }
-  
-  .rbc-toolbar button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .rbc-toolbar button:hover {
-    background-color: #0056b3;
+    background-color: #1976d2; /* لون الخلفية */
+    color: white; /* لون النص */
+    padding: 5px 10px; /* هوامش داخلية */
+    border-radius: 5px; /* زوايا دائرية */
+    cursor: pointer; /* شكل المؤشر عند المرور */
+    transition: background-color 0.3s; /* تأثير انتقال */
   }
   
   .rbc-event:hover {
-    opacity: 0.8;
+    background-color: #115293; /* لون الخلفية عند المرور */
   }
   
-  .rbc-today {
-    background-color: #e6f7ff;
+  /* نمط المودال */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px; /* زوايا دائرية */
+    width: 90%; /* عرض مرن */
+    max-width: 400px; /* حد أقصى للعرض */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* تأثير الظل */
+  }
+  
+  .close-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f44336; /* لون الخلفية */
+    color: #fff; /* لون النص */
+    border: none;
+    border-radius: 5px; /* زوايا دائرية */
+    cursor: pointer; /* شكل المؤشر عند المرور */
+    transition: background-color 0.3s; /* تأثير انتقال */
+  }
+  
+  .close-button:hover {
+    background-color: #d32f2f; /* لون الخلفية عند المرور */
   }
   
