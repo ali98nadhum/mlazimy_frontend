@@ -15,9 +15,14 @@ const MyCalendar = () => {
   const events = [
     {
       title: ' تسليم هوم ورك لماده الاتصالات الرقميه ',
-      start: new Date(2024, 9, 13), // 15 أكتوبر 2024
+      start: new Date(2024, 9, 13),
       end: new Date(2024, 9, 13),
     },
+    {
+      title: "امتحان لماده التحليلات الهندسيه",
+      start: new Date(2024 , 9 , 21),
+      end: new Date(2024, 9, 21),
+    }
   ];
 
   // دالة لفتح المودال
