@@ -25,13 +25,14 @@ import Calendar from "../Calendar/Calendar";
 
 const Hero = () => {
   const [showLogoComp, setShowLogoComp] = useState(true);
-  const { categoryData ,fetchData , subcategoryData , fetchSubcategory , notUserData , fetchUsersNotice} = useStore((state) => ({
+  const { categoryData ,fetchData , subcategoryData , fetchSubcategory , notUserData , fetchUsersNotice , subcategoryCount} = useStore((state) => ({
     categoryData: state.categoryData,
     fetchData: state.fetchData,
     fetchSubcategory: state.fetchSubcategory,
     subcategoryData: state.subcategoryData,
     fetchUsersNotice: state.fetchUsersNotice,
-    notUserData: state.notUserData
+    notUserData: state.notUserData,
+    subcategoryCount:state.subcategoryCount
   }));
 
 
@@ -118,7 +119,7 @@ const Hero = () => {
                 <div className="statistics-box">
                 <GiBookshelf className="statistics-icon" />
                   <p className="statistics-t">عدد المحاضرات</p>
-                  <p className="statistics-n"> {subcategoryData.length} </p>
+                  <p className="statistics-n"> {subcategoryCount} </p>
                 </div>
                 <div className="statistics-box">
                 <GiSpellBook className="statistics-icon" />

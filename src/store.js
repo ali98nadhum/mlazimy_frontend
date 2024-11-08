@@ -77,12 +77,13 @@ export const useStore = create((set) => ({
 
   // Get All Subcategory
   subcategoryData: [],
+  subcategoryCount: 0,
   fetchSubcategory: async () => {
     try {
       const response = await axios.get(
         "https://mlazimy-api.vercel.app/subcategory"
       );
-      set({ subcategoryData: response.data.data });
+      set({ subcategoryData: response.data.data , subcategoryCount: response.data.results });
     } catch (error) {
       console.error("Error fetching data", error);
     }
